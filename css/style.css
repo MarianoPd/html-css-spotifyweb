@@ -8,8 +8,8 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    color: #7d7f84;
-    font-size: 12px;
+    color: #6e6e6e;
+    font-size: 10px;
     font-weight: 700;
 }
 
@@ -25,7 +25,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: #7d7f84;
+    color: #6e6e6e;
 }
 
 /* HEADER */
@@ -132,12 +132,12 @@ main > *{
 }
 
 #menu .create div{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     background-color: #a3a3a3;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     line-height: 35px;
     vertical-align: middle;
@@ -153,7 +153,7 @@ main > *{
 }
 
 #menu ul:last-of-type li{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #menu .bottom-menu{
@@ -231,9 +231,162 @@ main > *{
 
 
 
+
+
+
+
+
+
+
+
 /* FOOTER */
 
 footer{
     height: 90px;      /* cambiare con max-height quando c'è contenuto*/
     background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 10px;
 }
+
+footer button{
+    background-color: #282828;
+    border: 0;
+    color: white;
+}
+
+footer .time{
+    height: 4px;
+    border-radius: 2px;
+    background-color: #6e6e6e;
+    display: inline-block;
+}
+
+footer .progress{
+    height: 100%;
+    background-color: #cccccc;
+    border-radius: 2px;
+    position: relative;
+}
+
+footer .progress div{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -2px);
+    display: none;
+}
+
+footer .time:hover .progress{
+    background-color: #adff2f;
+}
+
+footer .time:hover .progress div{
+    display: block;
+}
+
+#selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+#selection .song{
+    height: 50%;
+}
+
+#selection .song img{
+    max-height: 100%;
+}
+
+.song .data{
+    display: inline-block;
+    vertical-align: 80%;
+    padding-left: 10px;
+}
+
+.song .data h4{
+    font-size: 12px;
+    color: white;
+}
+
+.options a{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.options a:hover{
+    color: white;
+}
+
+#player{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+#player .buttons{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#player .buttons button{
+    
+    font-size: 20px;
+}
+
+#player .buttons .central-b{
+    font-size: 35px;
+}
+
+#player .buttons .central-b:hover{
+    font-size: 40px;
+}
+
+#player .bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+}
+
+#player .bar span{
+    color: white;
+}
+
+#player .bar .time{
+    width: 80%;
+}
+
+#player .bar .progress{
+    width: 20%;
+}
+
+#settings{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#settings .time{
+    width: 60%;
+}
+
+#settings .progress{
+    width: 25%;
+}
+
