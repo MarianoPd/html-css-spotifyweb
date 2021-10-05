@@ -1,0 +1,87 @@
+/* GENERAL SETTINGS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #7d7f84;
+}
+
+.clearfix:after{
+    content: "";
+    position: table;
+    clear: both;
+}
+
+ul{
+    list-style: none;
+}
+
+/* HEADER */
+
+header {
+    height: 90px;      /* cambiare con max-height quando c'è contenuto*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.4);
+    width: calc(100% - 230px);    
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 20px;
+}
+
+header button{
+    border-radius: 25px;
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    border: 2px solid white;
+    height: 50%;
+    padding: 0 50px;
+}
+
+
+/* MAIN */
+
+main{
+    height: calc(100vh - 90px);
+    width: 100%;
+}
+
+main > *{
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+
+#menu{
+    background-color: black;
+    width: 230px; /* cambiare con max-width quando c'è contenuto*/
+    color: white;
+}
+
+/* il logo */
+#menu > img{
+    padding: 25px;
+    height: 90px;
+}
+
+#albums{
+    background-color: #141922;
+    width: calc(100% - 230px);
+    padding-top: 100px;
+    overflow: auto;
+}
+
+
+/* FOOTER */
+
+footer{
+    height: 90px;      /* cambiare con max-height quando c'è contenuto*/
+    background-color: #282828;
+}
