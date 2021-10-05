@@ -71,13 +71,14 @@ main{
 
 main > *{
     height: 100%;
-    display: inline-block;
     float: left;
 }
 
 #menu{
     background-color: black;
     width: 230px; /* cambiare con max-width quando c'è contenuto*/    
+    display: flex;
+    flex-direction: column;
 }
 
 /* il logo */
@@ -86,12 +87,16 @@ main > *{
     height: 90px;
 }
 
-#menu .top-menu li:hover{
+#menu nav  li:hover{
     border-left: 2px solid #adff2f;
 }
 
 #menu ul li {
     padding: 3px 15px ;     
+}
+
+#menu ul li:hover{
+    color: white;
 }
 
 #menu ul li img{
@@ -103,6 +108,11 @@ main > *{
     vertical-align: 40%;
 }
 
+#menu ul li:hover a, #menu ul li:hover img{
+    color: white;
+    filter: brightness(100%);
+}
+
 #menu h3{
     text-transform: uppercase;
     color: white;
@@ -111,6 +121,14 @@ main > *{
 
 #menu .create{
     padding: 10px 0 0 15px;
+}
+
+#menu .create:hover a{
+    color: white;
+}
+
+#menu .create:hover div{
+    background-color: white;
 }
 
 #menu .create div{
@@ -129,9 +147,80 @@ main > *{
     padding-left: 5px;
 }
 
+/* lista delle playlist */
+#menu ul:last-of-type{
+    overflow-y: auto;
+}
+
 #menu ul:last-of-type li{
     margin-top: 15px;
 }
+
+#menu .bottom-menu{
+    padding: 0 15px;
+    background-color: black;
+    overflow: hidden; 
+    justify-self:flex-end;  
+    margin-top: auto; 
+}
+
+
+#menu .bottom-menu > div >  img{
+    height: 18px;    
+}
+
+#menu .bottom-menu > div > a{
+    vertical-align: 30%;
+}
+
+#menu .bottom-menu > div{
+    padding: 10px 0;
+}
+
+#menu .bottom-menu > div:last-of-type{
+    display: flex;
+    flex-flow: row; 
+    align-content: center;    
+}
+
+#menu .profile{
+    width: 30px;
+    height: 30px;
+    background-color: #7d7f84;
+    border-radius: 50%;
+    overflow: hidden;    
+}
+
+#menu .bottom-menu h3{
+    padding: 0 10px ;
+    line-height: 30px;
+}
+
+#menu .bottom-menu a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #albums{
     background-color: #141922;
@@ -139,6 +228,7 @@ main > *{
     padding-top: 100px;
     overflow: auto;
 }
+
 
 
 /* FOOTER */
