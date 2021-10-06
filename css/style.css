@@ -288,6 +288,7 @@ main > *{
 
 .row .item .img-container{    
     margin-bottom: 10px;
+    position: relative;
 }
 
 .img-container img{
@@ -298,29 +299,34 @@ main > *{
     border-radius: 50%;
 }
 
+.container:last-of-type .img-container .filter{
+    border-radius: 50%;
+}
+
 .img-container .filter{
     background-color: rgba(0, 0, 0, 0.377);
     width: 100%;
     height: 100%;
     text-align: center;
-    line-height: 180px;
     font-size: 50px;
     display: none;   
     color: white; 
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
 }
 
-.
+.filter i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .img-container:hover .filter{
     display: inline-block;
 }
-
-
-
-
-
-
-
-
 
 
 /* FOOTER */
@@ -481,6 +487,7 @@ footer .time:hover .progress div{
 
 /* RESPONSIVE SETTINGS */
 
+/* vertical settings */
 @media screen and (max-height: 200px){
     header{
         display:none;
@@ -498,6 +505,35 @@ footer .time:hover .progress div{
     #main-content{
         padding-top: 0;
         display: none;
+    }    
+}
+
+/* orizontal settings */
+
+/* large < 1200 */
+@media screen and (max-width: 1199px){
+    main{
+        background-color: red;
     }
-    
+}
+
+/* medium < 992  */
+@media screen and (max-width: 991px){
+    main{
+        background-color: blue;
+    }
+}
+
+/* small < 768 */
+@media screen and (max-width: 767px){
+    main{
+        background-color: violet;
+    }
+}
+
+/* x-small < 576 */
+@media screen and (max-width: 575px){
+    main{
+        background-color: green;
+    }
 }
