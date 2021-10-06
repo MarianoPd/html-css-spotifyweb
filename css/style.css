@@ -76,15 +76,21 @@ main > *{
 
 #menu{
     background-color: black;
-    width: 230px; /* cambiare con max-width quando c'è contenuto*/    
-    display: flex;
-    flex-direction: column;
+    width: 230px;   
+    overflow: hidden;  
+}
+
+#menu .top-menu{  
+    min-height: 200px; 
+    height: calc(100% - 180px);   
+    overflow: hidden; 
 }
 
 /* il logo */
 #menu > img{
     padding: 25px;
     height: 90px;
+    display: block;
 }
 
 #menu nav  li:hover{
@@ -148,22 +154,19 @@ main > *{
 }
 
 /* lista delle playlist */
-#menu ul:last-of-type{
+#menu ul.last-list{
     overflow-y: auto;
+    height: 50%;
 }
 
-#menu ul:last-of-type li{
+#menu ul.last-list li{
     margin-top: 10px;
 }
 
 #menu .bottom-menu{
     padding: 0 15px;
-    background-color: black;
-    overflow: hidden; 
-    justify-self:flex-end;  
-    margin-top: auto; 
+    height: 90px;     
 }
-
 
 #menu .bottom-menu > div >  img{
     height: 18px;    
@@ -187,8 +190,7 @@ main > *{
     width: 30px;
     height: 30px;
     background-color: #7d7f84;
-    border-radius: 50%;
-    overflow: hidden;    
+    border-radius: 50%;  
 }
 
 #menu .bottom-menu h3{
@@ -242,12 +244,13 @@ main > *{
 /* FOOTER */
 
 footer{
-    height: 90px;      /* cambiare con max-height quando c'è contenuto*/
+    height: 90px;      
     background-color: #282828;
     display: flex;
     justify-content: space-between;
     align-content: center;
     padding: 0 10px;
+    z-index: 3;
 }
 
 footer button{
@@ -347,9 +350,11 @@ footer .time:hover .progress div{
 
 #player .buttons .central-b{
     font-size: 35px;
+    height: 40px;
+    width: 40px;
 }
 
-#player .buttons .central-b:hover{
+#player .buttons .central-b i:hover{
     font-size: 40px;
 }
 
@@ -390,3 +395,22 @@ footer .time:hover .progress div{
     width: 25%;
 }
 
+
+
+/* RESPONSIVE SETTINGS */
+
+@media screen and (max-height: 200px){
+    header{
+        display:none;
+    }
+
+
+    #menu > img{
+        display: none;
+    }
+
+    #albums{
+        padding-top: 0;
+    }
+    
+}
