@@ -74,6 +74,8 @@ main > *{
     float: left;
 }
 
+/* ASIDE */
+
 #menu{
     background-color: black;
     width: 230px;   
@@ -81,7 +83,7 @@ main > *{
 }
 
 #menu .top-menu{  
-    min-height: 200px; 
+    min-height: 100px; 
     height: calc(100% - 180px);   
     overflow: hidden; 
 }
@@ -202,39 +204,37 @@ main > *{
     color: white;
 }
 
+/* MAIN CONTENT */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#albums{
+#main-content{
     background-color: #141922;
     width: calc(100% - 230px);
     padding-top: 100px;
     overflow: auto;
 }
 
+#main-content nav.top-nav{
+    margin: auto;
+    width: 100%;    
+}
 
+.top-nav ul{
+    margin: auto;
+    width: 100%;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
+.top-nav ul li{
+    text-transform: uppercase;
+    padding: 0 10px;
+}
 
-
+.top-nav ul li:hover a{
+    color: white;
+}
 
 
 
