@@ -11,6 +11,7 @@ body{
     color: #6e6e6e;
     font-size: 10px;
     font-weight: 700;
+    background-color: #141922;
 }
 
 .clearfix:after{
@@ -93,6 +94,10 @@ main > *{
     padding: 25px;
     height: 90px;
     display: block;
+}
+
+#menu nav{
+    overflow: auto;
 }
 
 #menu nav  li:hover{
@@ -193,6 +198,7 @@ main > *{
     height: 30px;
     background-color: #7d7f84;
     border-radius: 50%;  
+    overflow: hidden;
 }
 
 #menu .bottom-menu h3{
@@ -207,7 +213,6 @@ main > *{
 /* MAIN CONTENT */
 
 #main-content{
-    background-color: #141922;
     width: calc(100% - 230px);
     padding-top: 100px;
     overflow: auto;
@@ -215,13 +220,13 @@ main > *{
 
 #main-content nav.top-nav{
     margin: auto;
-    width: 100%;    
+    width: 100%;  
+    /* height: 50px;  */
 }
 
 .top-nav ul{
     margin: auto;
-    width: 100%;
-    
+    width: 100%;    
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -232,9 +237,86 @@ main > *{
     padding: 0 10px;
 }
 
+.top-nav ul li .underscore{
+    width: 20px;
+    height: 2px;
+    background-color: #adff2f;
+    margin: auto;
+    margin-top: 1px;
+    display: none;
+}
+
+.top-nav ul li:hover .underscore{
+    display: block;
+}
+
 .top-nav ul li:hover a{
     color: white;
 }
+
+#main-content .container{
+    min-height: 300px;
+    padding: 20px 15px;
+}
+
+#main-content .container .row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container .row-title{
+    padding-bottom: 20px
+}
+
+.row-title h1{
+    color: white;
+    font-size: 18px;  
+    padding-bottom: 10px;  
+}
+
+.row .item{
+    text-align: center;
+    min-width: 175px;
+    width: 12vw;
+    padding-right: 15px;
+}
+
+.item h3{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.row .item .img-container{    
+    margin-bottom: 10px;
+}
+
+.img-container img{
+    width: 100%;    
+}
+
+.container:last-of-type .img-container img{
+    border-radius: 50%;
+}
+
+.img-container .filter{
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 180px;
+    font-size: 50px;
+    display: none;   
+    color: white; 
+}
+
+.
+.img-container:hover .filter{
+    display: inline-block;
+}
+
+
+
+
 
 
 
@@ -404,13 +486,18 @@ footer .time:hover .progress div{
         display:none;
     }
 
+    #menu{
+        display: none;
+    }
 
     #menu > img{
         display: none;
     }
+    
 
-    #albums{
+    #main-content{
         padding-top: 0;
+        display: none;
     }
     
 }
