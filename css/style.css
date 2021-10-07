@@ -68,6 +68,7 @@ header button:hover{
 main{
     height: calc(100vh - 90px);
     width: 100%;
+       
 }
 
 main > *{
@@ -275,7 +276,7 @@ main > *{
     width: 16.5%;
     padding-right: 15px;
     padding-top: 20px;
-    height:;
+    transition: ease all 0.5s;
 }
 
 .item h3{
@@ -305,13 +306,13 @@ main > *{
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 50px;
-    display: none;   
+    font-size: 50px;   
     color: white; 
     position: absolute;
-    z-index: 99;
+    z-index: -1;
     top: 0;
     left: 0;
+    transition: z-index 1s;
 }
 
 .filter i{
@@ -322,7 +323,7 @@ main > *{
 }
 
 .img-container:hover .filter{
-    display: inline-block;
+    z-index: 99;
 }
 
 
@@ -387,6 +388,9 @@ footer .time:hover .progress div{
 
 #selection .song{
     height: 50%;
+    display: flex;
+    align-items: center;
+    width: 60%;
 }
 
 #selection .song img{
@@ -463,6 +467,7 @@ footer .time:hover .progress div{
 
 #player .bar .time{
     width: 80%;
+    transition: ease all 0.5s;
 }
 
 #player .bar .progress{
@@ -480,6 +485,7 @@ footer .time:hover .progress div{
 
 #settings .time{
     width: 60%;
+    transition: ease all 0.5s;
 }
 
 #settings .progress{
@@ -488,9 +494,9 @@ footer .time:hover .progress div{
 
 
 
-/* RESPONSIVE SETTINGS */
+/******* RESPONSIVE SETTINGS *******/
 
-/* vertical settings */
+/* VERTICAL SETTINGS */
 @media screen and (max-height: 200px){
     header{
         display:none;
@@ -502,8 +508,7 @@ footer .time:hover .progress div{
 
     #menu > img{
         display: none;
-    }
-    
+    }    
 
     #main-content{
         padding-top: 0;
@@ -511,7 +516,7 @@ footer .time:hover .progress div{
     }    
 }
 
-/* orizontal settings */
+/* ORIZONTAL SETTINGS */
 
 /* large < 1200 */
 @media screen and (max-width: 1199px){
@@ -536,7 +541,7 @@ footer .time:hover .progress div{
         min-width: 170px;
     }
 
-    #main-content .item:nth-of-type(6), #main-content .item:nth-of-type(5){
+    #main-content .item:nth-last-of-type(1), #main-content .item:nth-of-type(2){
         display: none;
     }
 }
@@ -552,7 +557,7 @@ footer .time:hover .progress div{
         min-width: 150px;
     }
 
-    #main-content .item:nth-of-type(4), #main-content .item:nth-of-type(3){
+    #main-content .item:nth-last-of-type(1), #main-content .item:nth-last-of-type(2){
         display: none;
     }
 
@@ -564,6 +569,10 @@ footer .time:hover .progress div{
 
     #player .bar .time{
         width: 60%;
+    }
+
+    #settings .time{
+        width: 40%;
     }
 
 }
@@ -594,5 +603,12 @@ footer .time:hover .progress div{
         padding-top: 15px;
     }
 
-    
+    footer #selection img{
+        width: 30%;
+        object-fit: contain;
+    }
+
+    footer #selection .data{
+        width: 60%;
+    }
 }
