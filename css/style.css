@@ -91,10 +91,17 @@ main > *{
 }
 
 /* il logo */
-#menu > img{
+#menu .logo{
     padding: 25px;
     height: 90px;
     display: block;
+}
+
+#menu .mini-logo{
+    height: 20px;
+    display: none;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
 #menu nav{
@@ -587,8 +594,12 @@ footer .time:hover .progress div{
         width: 50px;
     }
 
-    #menu > img, .nav a, #menu h3, .create, .last-list, .bottom-menu{
+    #menu .logo, .nav a, #menu h3, .create, .last-list, .bottom-menu{
         display: none;
+    }
+
+    #menu .mini-logo{
+        display: block;
     }
 
     #menu .nav{
