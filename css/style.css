@@ -269,8 +269,9 @@ main > *{
 #main-content .container .row{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
 }
+
 
 .row-title h1{
     color: white;
